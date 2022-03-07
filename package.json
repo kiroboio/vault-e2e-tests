@@ -1,0 +1,31 @@
+{
+  "name": "vault-e2e-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "export CYPRESS_REMOTE_DEBUGGING_PORT=9222 && cypress open",
+    "cypress-windows": "set CYPRESS_REMOTE_DEBUGGING_PORT=9222 && cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiroboio/vault-e2e-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiroboio/vault-e2e-tests/issues"
+  },
+  "homepage": "https://github.com/kiroboio/vault-e2e-tests#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "axios": "^0.26.0",
+    "cypress": "^9.5.1",
+    "cypress-wait-until": "^1.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "puppeteer": "^13.4.1",
+    "typescript": "^4.6.2"
+  }
+}

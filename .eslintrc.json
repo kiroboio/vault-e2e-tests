@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:cypress/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-console": "error",
+    "no-unreachable": "error",
+    "no-unreachable-loop": "error",
+    "no-unexpected-multiline": "error",
+    "no-self-compare": "error",
+    "no-self-assign": "error",
+    "no-new-symbol": "error",
+    "no-empty-pattern": "error",
+    "no-duplicate-imports": "error",
+    "eqeqeq": "error",
+    "max-params": ["error", 3],
+    "no-else-return": "error",
+    "no-plusplus": "error",
+    "no-nested-ternary": "error",
+    "no-var": "error",
+    "max-depth": ["warn", 2],
+    "max-nested-callbacks": ["warn", 3],
+    "no-const-assign": "warn",
+    "no-inline-comments": "warn"
+  }
+}
