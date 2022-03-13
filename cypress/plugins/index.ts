@@ -19,7 +19,9 @@ module.exports = (on: Cypress.PluginEvents, _config: Cypress.Config) => {
     'before:browser:launch',
     (_browser: Cypress.Browser, launchOptions: Cypress.BrowserLaunchOptions) => {
 
+      console.log("before browser launch")
       const pathToExtension = path.join(__dirname, 'Metamask');
+      console.log("broser set remote")
       launchOptions.args.push('--remote-debugging-port=9222');
       launchOptions.extensions.push(pathToExtension);
 

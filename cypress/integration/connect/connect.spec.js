@@ -12,7 +12,11 @@
 // https://on.cypress.io/introduction-to-cypress
 describe('connect to vault', () => {
   beforeEach(() => {
-    cy.visit(Cypress.env("vault_url"));
+    try {
+      cy.visit("https://vault.kirobo.me");
+    }catch(e) {
+      console.log(e)
+    }
   });
 
   it('open connect modal and run metamask or install metamask', () => {
@@ -24,3 +28,16 @@ describe('connect to vault', () => {
     cy.viewport('macbook-16')
   });
 });
+
+describe('set metamask acc', () => {
+
+  it('set metamsk acc', () => {
+    cy.task('connectBrowser')
+    cy.wait(2000)
+    cy.task('setPages')
+    cy.task('loginToMetamask', { password: '12344321' })
+    cy.reload()
+    cy.viewport('macbook-16')
+  });
+});
+
